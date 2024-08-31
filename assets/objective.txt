@@ -1,7 +1,0 @@
-29 08 2024
-mengaktifkan setiap tombol
-backspace(opsional)
-function calculasi(opsional)
-30 08 2024
-styling dark mode dan light mode
-upload github (opsional)
