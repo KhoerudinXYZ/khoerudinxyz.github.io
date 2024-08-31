@@ -3,6 +3,7 @@ const theme = document.querySelector('#theme')
 const themeI = document.querySelector('#theme-icon')
 const LTheme = 'styleLight.css'
 const DTheme = 'styleDark.css'
+const Igit = document.getElementById('github-icon')
 const input = document.querySelector('input')
 const inputB = document.querySelectorAll('.buttons')
 const result = document.querySelector('#result')
@@ -29,25 +30,6 @@ function calculate(value) {
             }, 1000);
         }
     }
-    
-// Change placeholder color
-function changeColor(toColor) {
-        addCSS = document.createElement('style');
-        addCSS.innerHTML = "::placeholder { color: " + toColor + "; }";
-        document.body.append(addCSS);
-      }
-//   Change Hover color
-      function changeHover(toColor) {
-        var css = 'input:hover { background-color: black; }';
-        var style = document.createElement('style');
-        if (style.styleSheet) {
-            style.styleSheet.cssText = css;
-        } else {
-            style.appendChild(document.createTextNode(css));
-        }
-        inputB[0].appendChild(style);
-
-      }
 
 // Change Theme function
 themeI.addEventListener('click', function changeTheme() {
@@ -55,30 +37,11 @@ themeI.addEventListener('click', function changeTheme() {
         if(c % 2 == 1) { //change to light mode
          theme.setAttribute("href", DTheme);
          themeI.setAttribute("src", 'assets/SunIcon.svg');
-        //    wrap.style.backgroundColor = 'lightblue'
-        //    wrap.style.color = 'black'
-        //    themeI.setAttribute('src', "assets/MoonIcon.svg")
-        //    input.style.backgroundColor = 'white'
-        //    changeColor('black')
-        //    changeHover('black')
-        //    result.style.color = 'Black';
-        //    for(let i = 0;i < inputB.length; i++) {
-        //         inputB[i].style.backgroundColor = 'white'
-        //         inputB[i].style.color = 'black'
-        // }
+         Igit.setAttribute('src', 'assets/GitHubLight.svg');
         } else { // change to dark mode
             theme.setAttribute("href", LTheme);
             themeI.setAttribute("src", 'assets/MoonIcon.svg');
-        //    wrap.style.backgroundColor = ('rgb(29,27,27)')
-        //    wrap.style.color = 'white'
-        //    themeI.setAttribute('src', 'assets/SunIcon.svg')
-        //    input.style.backgroundColor = 'rgb(80, 80, 80)'
-        //    changeColor('white')
-        //    result.style.color = 'white';
-        //    for(let i = 0;i < inputB.length; i++) {
-        //         inputB[i].style.backgroundColor = 'rgb(80,80,80)'
-        //         inputB[i].style.color = 'white'
-        //  }
+            Igit.setAttribute('src', 'assets/GitHubDark.svg');
         }
 
 })
