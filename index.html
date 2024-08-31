@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Calculator</title>
+  <meta name="description" content="Simple Calculator With Dark Mode." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image" href="assets/calculator.ico">
+  <link rel="stylesheet" href="styleDark.css" id="theme"/>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="header-container">
+        <!-- This heading also notifies about the theme change.-->
+        <h1 id="toast">Calculator</h1>
+        <div class="top-buttons">
+          <a href="https://github.com/KhoerudinXYZ">
+            <img src="assets/GitHubLight.svg" alt="Sun Icon" height="22.5" width="22.5" id="github-icon">
+          </a>
+          <button type="button" class="theme-button">
+            <img src="assets/SunIcon.svg" alt="Theme Icon" height="19" width="19" id="theme-icon">
+          </button>
+        </div>
+      </div>
+      <div class="first-row">
+        <input type="text" name="result" id="result" placeholder="Result" readonly/>
+        <input type="button" class="button"  value="C" onclick="result.value=''" id="clear-button" />
+      </div>
+      <div class="second-row">
+        <input type="button" class="buttons" value="1" onclick="Numbers(1)" />
+        <input type="button" class="buttons" value="2" onclick="Numbers(2)" />
+        <input type="button" class="buttons" value="3" onclick="Numbers(3)" />
+        <input type="button" class="buttons" value="+" onclick="Numbers('+')" />
+      </div>
+      <div class="third-row">
+        <input type="button" class="buttons" value="4" onclick=" Numbers(4)" />
+        <input type="button" class="buttons" value="5" onclick=" Numbers(5)" />
+        <input type="button" class="buttons" value="6" onclick=" Numbers(6)" />
+        <input type="button" class="buttons" value="-" onclick="Numbers('-')" />
+      </div>
+      <div class="fourth-row">
+        <input type="button" class="buttons" value="7" onclick="Numbers(7)" />
+        <input type="button" class="buttons" value="8" onclick="Numbers(8)" />
+        <input type="button" class="buttons" value="9" onclick=" Numbers(9)" />
+        <input type="button" class="buttons" value="x" onclick="Numbers('*')" />
+      </div>
+      <div class="fifth-row">
+        <input type="button" class="buttons" value="/" onclick="Numbers('/')" />
+        <input type="button" class="buttons" value="0" onclick="Numbers(0)" />
+        <input type="button" class="buttons" value=" " id="bs"/>
+        <input type="button" class="buttons" value="=" onclick="calculate(result.value)" />
+      </div>
+    </div>
+  </div>
+  <script src="script.js">
+  </script>
+</body>
+
+</html>
